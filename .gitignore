@@ -1,0 +1,73 @@
+# ---------- build outputs ----------
+build/
+out/
+-p/
+.dyn_jit_cache/
+
+# compiled artifacts
+*.o
+*.obj
+*.d
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.pdb
+*.ilk
+*.exp
+
+# keep source scripts, ignore compiled helpers
+scripts/gen_tensor.exe
+scripts/gen_tensor
+tools/*.exe
+tools/dnb_to_tns
+
+# ---------- tensor data ----------
+# benchmarks bring their own FROSTT tensors; only ship small smoke tests
+data/*.tns
+data/*.dnb
+data/*.dnp
+data/*.bin
+data/*.npz
+data/*.npy
+!data/3d_7.tns
+!data/synth_cp_r5.tns
+!data/README.md
+
+# stray CP dumps written to the repo root by benchmarking runs
+run_*.cp_fm*.bin
+run_*.cp_lambda.bin
+run_*.cp_init_fm*.bin
+*.cp_fm*.bin
+*.cp_lambda.bin
+
+# ---------- logs / transcripts ----------
+# benchmarking output dropped at the repo root -- none of it is source
+/*.log
+/*.txt
+/alto_*.log
+/dyn_*.txt
+/s3_*.log
+/s4_*.log
+/jit_*.log
+/build.log
+/rebuild.log
+/build_s4.log
+/bench_*.tsv
+
+# ---------- ALTO competitor ----------
+# Third-party reference implementation used only for benchmarking.
+# Clone upstream separately into competitor/ALTO/ if you need it.
+competitor/
+
+# ---------- editor / OS ----------
+.vscode/
+.idea/
+.cursor/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
