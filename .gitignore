@@ -58,20 +58,10 @@ run_*.cp_init_fm*.bin
 /build_s4.log
 /bench_*.tsv
 
-# benchmark logs dumped under data/
-data/*.log
-data/*.err
-
 # ---------- ALTO competitor ----------
 # Third-party reference implementation used only for benchmarking.
 # Clone upstream separately into competitor/ALTO/ if you need it.
 competitor/
-
-# ---------- reference paper from another project ----------
-TPDS__HOPE__Hardware_Agnostic_Parallel_Algorithm/
-
-# ---------- LaTeX journal draft (kept out of public repo) ----------
-journal/
 
 # ---------- editor / OS ----------
 .vscode/
